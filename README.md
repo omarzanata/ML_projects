@@ -1,1 +1,1 @@
-# ML_projects
+# Titanic_shipwreck_survival_prediction
