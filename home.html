@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Bank</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="static\main.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand logoName" href="#"> Titanic shipwreck survival prediction </a>
+      </div>
+    </nav>
+
+    <div class="container-fluid cover">
+      <div class="row">
+        <div class="col-8 m-auto mt-1 infoCard">
+          <h4 class="cardTitle">passenger data </h4>
+
+          <!---left--------->
+          <form action="/predict" method="POST">
+            <div class="form-group row">
+              <div class="col-6">
+                 <!------Pclass---------->
+                <div class="form-group mb-3 row">
+                  <label for="inputPclass" class="col-sm-5 col-form-label"
+                    >Ticket class</label
+                  >
+                 <div class="col-sm-5">
+                    <select class="form-select mb-2" aria-label=" example" name='Pclass'>
+                      <option selected disabled>Pclass</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                </div>
+                <!------Sex---------->
+                <div class="form-group mb-3 row">
+                  <label for="inputSex" class="col-sm-5 col-form-label"
+                    >Sex</label
+                  >
+                    <div class="col-sm-5">
+                    <select class="form-select mb-2" aria-label=" example" name='Sex'>
+                      <option selected disabled>Sex</option>
+                      <option value="male">male</option>
+                      <option value="female">female</option>
+                    </select>
+                  </div>
+                </div>
+                <!------Age---------->
+                <div class="form-group mb-3 row">
+                  <label for="inputAge" class="col-sm-5 col-form-label"
+                    >Age in years</label
+                  >
+                  <div class="col-sm-5">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputAge"
+                      name="Age"
+                      placeholder="Age in years"
+                    />
+                  </div>
+                </div>
+
+                <!------SibSp---------->
+                <div class="form-group mb-3 row">
+                  <label for="inputSibSp" class="col-sm-5 col-form-label"
+                    >spouses aboard</label
+                  >
+                  <div class="col-sm-5">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputSibSps"
+                      name="SibSp"
+                      placeholder="Num of spouses"
+                    />
+                  </div>
+                </div>
+
+                <!------Fare---------->
+                <div class="form-group mb-3 row">
+                  <label
+                    for="inputFare"
+                    class="col-sm-5 col-form-label"
+                    name="type_of_meal_plan"
+                    >Passenger fare</label
+                  >
+                  <div class="col-sm-5">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputFare"
+                      name="Fare"
+                      placeholder="Passenger fare"
+                    />
+                  </div>
+                </div>
+                <!------family-->
+                <div class="form-group mb-3 row">
+                  <label for="inputfamily" class="col-sm-5 col-form-label"
+                    >Family</label
+                  >
+                  <div class="col-sm-5">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputfamily"
+                      name="family"
+                      placeholder="Family members"
+                    />
+                  </div>
+                </div>
+                <!-----Embarked-->
+                <div class="form-group mb-3 row">
+                  <label for="inputEmbarked" class="col-sm-5 col-form-label"
+                    >Port of Embarkation</label
+                  >
+                  <div class="col-sm-5">
+                    <select
+                      class="form-select mb-2"
+                      aria-label=" example"
+                      name="Embarked"
+                    >
+                      <option selected disabled >Embarked(C = Cherbourg, Q = Queenstown, S = Southampton)</option>
+                      <option value="S">S</option>
+                      <option value="C">C</option>
+                      <option value="Q">Q</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-1 m-auto">
+                  <button type="submit" class="btn btn-primary m-auto">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
